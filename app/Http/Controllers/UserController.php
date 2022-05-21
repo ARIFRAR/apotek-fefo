@@ -40,7 +40,7 @@ class UserController extends Controller
             'email' => 'required|email|unique:users',
             'password' => 'required',
         ]);
-
+        $request['password'] = bcrypt($request->password);
         User::create($request->all());
         Alert::toast('User '. $request->nama .' Berhasil ditambahkan','success');
         return redirect()->route('pengguna.index');

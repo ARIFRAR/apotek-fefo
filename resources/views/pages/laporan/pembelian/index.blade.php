@@ -35,6 +35,7 @@
                                     <th>No. Pembelian</th>
                                     <th>Supplier</th>
                                     <th>Tanggal</th>
+                                    <th>User</th>
                                     <th>Total</th>
                                     <th class="text-center">#</th>
                                 </tr>
@@ -46,6 +47,7 @@
                                     <td>{{ $item->no_pembelian }}</td>
                                     <td>{{ $item->supplier->nama_supplier }}</td>
                                     <td>{{ $item->tanggal_beli }}</td>
+                                    <td>{{ $item->user->nama }}</td>
                                     <td class="total">Rp{{ number_format($item->total, 0, ',', '.') }}</td>
                                     <td class="text-center">
                                         <a href="{{ route('laporan.pembelian.show', $item->id) }}"
@@ -56,7 +58,7 @@
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <th colspan="4" class="text-center">Total Keseluruhan Pembelian : </th>
+                                    <th colspan="5" class="text-center">Total Keseluruhan Pembelian : </th>
                                     <th id="grand-total"></th>
                                 </tr>
                             </tfoot>

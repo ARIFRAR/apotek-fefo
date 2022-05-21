@@ -39,7 +39,7 @@
                                     <td class="text-center">
                                         <form action="{{ route('obat-expired.hapus', $item->id) }}" method="POST">
                                             @csrf
-                                            <button type="submit" class="btn btn-sm btn-success"
+                                            <button type="submit" class="btn btn-sm btn-primary"
                                                 onclick="return confirm('Yakin ingin menghapus stok obat ini?')">Hapus
                                                 Stok</button>
                                         </form>

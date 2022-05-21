@@ -34,6 +34,7 @@
                                     <th>No</th>
                                     <th>No. Penjualan</th>
                                     <th>Tanggal</th>
+                                    <th>User</th>
                                     <th>Total</th>
                                     <th class="text-center">#</th>
                                 </tr>
@@ -44,6 +45,7 @@
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $item->no_penjualan }}</td>
                                     <td>{{ $item->tanggal_jual }}</td>
+                                    <td>{{ $item->user->nama }}</td>
                                     <td class="total">Rp{{ number_format($item->total, 0, ',', '.') }}</td>
                                     <td class="text-center">
                                         <a href="{{ route('laporan.penjualan.show', $item->id) }}"
@@ -54,7 +56,7 @@
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <th colspan="3" class="text-center">Total Keseluruhan Penjualan : </th>
+                                    <th colspan="4" class="text-center">Total Keseluruhan Penjualan : </th>
                                     <th id="grand-total"></th>
                                     {{-- <th>Rp. {{ number_format($total_penjualan, 0, ',', '.') }}</th> --}}
                                 </tr>

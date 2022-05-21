@@ -45,7 +45,7 @@ class PembelianController extends Controller
             $pembelian = Pembelian::create([
                 'no_pembelian' => $request->no_pembelian,
                 'supplier_id' => $request->supplier,
-                'user_id' => 1,
+                'user_id' => auth()->user()->id,
                 'tanggal_beli' => $request->tanggal,
                 'bayar' => (int)$bayar,
                 'total' => $total
@@ -70,7 +70,7 @@ class PembelianController extends Controller
 
 
             DB::commit();
-            Alert::success('Berhasil', 'Data Berhasil Disimpan');
+            Alert::success('Berhasil', 'Pembelian Berhasil Disimpan');
             return redirect()->route('pembelian.create');
         } catch (\Exception $e) {
             DB::rollback();

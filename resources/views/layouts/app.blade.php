@@ -11,7 +11,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ setTitle($page_name) }}</title>
-    <link rel="icon" type="image/x-icon" href="{{asset('storage/img/pharmacy.png')}}" />
+    <link rel="icon" type="image/x-icon" href="{{asset('pharmacy.png')}}" />
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
 

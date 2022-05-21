@@ -41,7 +41,7 @@ class PenjualanController extends Controller
             // insert table penjualan
             $penjualan = Penjualan::create([
                 'no_penjualan' => $request->no_penjualan,
-                'user_id' => 1,
+                'user_id' => auth()->user()->id,
                 'tanggal_jual' => $request->tanggal,
                 'bayar' => (int)$bayar,
                 'total' => $total

@@ -55,7 +55,7 @@ class SupplierController extends Controller
     public function update(Request $request, Supplier $supplier)
     {
         $this->validate($request, [
-            'nama_supplier' => 'required|unique:suppliers',
+            'nama_supplier' => 'required',
             'no_telp' => 'required|alpha_num',
             'alamat' => 'required',
         ]);
