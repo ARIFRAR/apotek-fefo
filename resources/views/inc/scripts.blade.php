@@ -133,6 +133,7 @@
 
 @case('pembelian')
 <script src="{{asset('plugins/table/datatable/datatables.js')}}"></script>
+<script src="{{asset('plugins/notification/snackbar/snackbar.min.js')}}"></script>
 <script>
     $(document).ready(function () {
         hideButton()
@@ -160,6 +161,13 @@
             const nama = obat.data('nama');
             const harga = obat.data('harga');
             const cek = $('input#jumlah-' + id);
+            Snackbar.show({
+                text: `Obat ${nama} berhasil ditambahkan`,
+                pos: 'top-right',
+                showAction: false,
+                actionTextColor: '#fff',
+                backgroundColor: '#4361ee',
+            });
 
             if (cek.length) {
                 cek.val(parseInt(cek.val()) + 1);
@@ -219,6 +227,14 @@
 
         $(document).on('click', '.hapus-detail', function () {
             $(this).closest('tr').remove();
+            const nama = $(this).closest('tr').find('td:first-child').text();
+            Snackbar.show({
+                text: `Obat ${nama} berhasil dihapus`,
+                pos: 'top-right',
+                showAction: false,
+                actionTextColor: '#fff',
+                backgroundColor: '#3b3f5c'
+            });
             grandTotal();
             hideButton();
             $('#bayar').val('');
@@ -335,6 +351,7 @@
 
 @case('penjualan')
 <script src="{{asset('plugins/table/datatable/datatables.js')}}"></script>
+<script src="{{asset('plugins/notification/snackbar/snackbar.min.js')}}"></script>
 <script>
     $(document).ready(function () {
         hideButton()
@@ -369,6 +386,14 @@
                 alert(`Stok obat ${nama} habis`);
                 return false;
             }
+
+            Snackbar.show({
+                text: `Obat ${nama} berhasil ditambahkan`,
+                pos: 'top-right',
+                showAction: false,
+                actionTextColor: '#fff',
+                backgroundColor: '#4361ee',
+            });
 
             if (cek.length) {
                 cek.val(parseInt(cek.val()) + 1);
@@ -417,6 +442,14 @@
 
         $(document).on('click', '.hapus-detail', function () {
             $(this).closest('tr').remove();
+            const nama = $(this).closest('tr').find('td:first-child').text();
+            Snackbar.show({
+                text: `Obat ${nama} berhasil dihapus`,
+                pos: 'top-right',
+                showAction: false,
+                actionTextColor: '#fff',
+                backgroundColor: '#3b3f5c'
+            });
             grandTotal();
             hideButton();
             $('#bayar').val('');
