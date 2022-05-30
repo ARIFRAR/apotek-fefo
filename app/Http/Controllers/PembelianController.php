@@ -32,9 +32,6 @@ class PembelianController extends Controller
     {
 
         DB::beginTransaction();
-        // dd($request->all());
-        $rupiah = Str::replaceFirst('Rp', '', $request->bayar);
-        $bayar= Str::replace('.', '', $rupiah);
 
         $total = 0;
         foreach ($request->obat_id as $key => $value) {
@@ -47,7 +44,6 @@ class PembelianController extends Controller
                 'supplier_id' => $request->supplier,
                 'user_id' => auth()->user()->id,
                 'tanggal_beli' => $request->tanggal,
-                'bayar' => (int)$bayar,
                 'total' => $total
             ]);
 
@@ -67,7 +63,6 @@ class PembelianController extends Controller
                 $obat->stok += $request->jumlah_beli[$key];
                 $obat->save();
             }
-
 
             DB::commit();
             Alert::success('Berhasil', 'Pembelian Berhasil Disimpan');

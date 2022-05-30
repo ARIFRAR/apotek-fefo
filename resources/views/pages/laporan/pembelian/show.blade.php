@@ -22,15 +22,13 @@
                                     <strong>{{ $pembelian->no_pembelian }}</strong></li>
                                 <li class="list-group-item">Tanggal Pembelian :
                                     <strong>{{ $pembelian->tanggal_beli }}</strong></li>
-                                <li class="list-group-item">Supplier :
-                                    <strong>{{ $pembelian->supplier->nama_supplier }}</strong></li>
                             </ul>
                         </div>
                         <div class="col-lg-6">
                             <ul class="list-group">
+                                <li class="list-group-item">Supplier :
+                                    <strong>{{ $pembelian->supplier->nama_supplier }}</strong></li>
                                 <li class="list-group-item">Petugas : <strong>{{ $pembelian->user->nama }}</strong></li>
-                                <li class="list-group-item">Bayar : <strong>Rp.
-                                        {{ number_format($pembelian->bayar) }}</strong></li>
                             </ul>
                         </div>
                     </div>

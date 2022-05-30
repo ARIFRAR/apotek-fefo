@@ -20,7 +20,6 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained();
             $table->date('tanggal_beli');
             $table->integer('total');
-            $table->integer('bayar');
             $table->timestamps();
         });
     }

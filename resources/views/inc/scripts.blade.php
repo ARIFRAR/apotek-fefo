@@ -237,7 +237,6 @@
             });
             grandTotal();
             hideButton();
-            $('#bayar').val('');
         });
 
         $(document).on('change keyup', '.jumlah-obat', function () {
@@ -288,7 +287,6 @@
             });
             $("#grand-total").html(formatRupiah(grandTotal + '', 'Rp'));
             $('#bayar').change();
-            validateBayar();
         }
 
         function hideButton() {
@@ -298,34 +296,6 @@
                 $('#save').show();
             }
         }
-
-        function validateBayar() {
-            $(document).on('change keyup', '#bayar', function () {
-                var bayar = $("#bayar").val().replace(/\./g, '').replace(/Rp/g, '');
-                var grandTotal = $("#grand-total").html().replace(/\./g, '').replace(/Rp/g, '');
-                console.log(grandTotal);
-                if (Number(bayar) < Number(grandTotal)) {
-                    // prevent button form submit
-                    $("#save").attr('disabled', true);
-                    $('#bayar').addClass('is-invalid');
-                    $('#bayar').removeClass('is-valid');
-                } else {
-                    $("#save").attr('disabled', false);
-                    $('#bayar').addClass('is-valid');
-                    $('#bayar').removeClass('is-invalid');
-                }
-
-                // kembalian
-                var kembalian = Number(bayar) - Number(grandTotal);
-                $("#kembalian").html(formatRupiah(kembalian + '', 'Rp'));
-
-            })
-        }
-
-        $('#bayar').keyup(function () {
-            const val = $(this).val();
-            $(this).val(formatRupiah(val, 'Rp'));
-        });
 
         /* Fungsi formatRupiah */
         function formatRupiah(angka, prefix) {

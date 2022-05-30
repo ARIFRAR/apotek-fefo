@@ -127,16 +127,6 @@
                         <div class="widget-content widget-content-area">
                             <h5 class="d-inline">Grand Total : <span id="grand-total" class="font-weight-bold"></span>
                             </h5>
-                            <div class="form-group row my-3">
-                                <label for="bayar" class="col-sm-2 col-form-label col-form-label-sm">
-                                    <h5>Bayar</h5>
-                                </label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control form-control-sm" id="bayar" name="bayar"
-                                        required>
-                                </div>
-                            </div>
-                            <h5 class="d-inline">Kembalian : <span id="kembalian" class="font-weight-bold"></span></h5>
                             <div class="form-group mt-2">
                                 <button type="submit" name="submit" id="save" class="btn btn-primary">Simpan</button>
                             </div>
