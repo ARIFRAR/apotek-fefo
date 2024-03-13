@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login | Apotek - Penjualan Obat FEFO</title>
+    <title>Login | SIM Apotek</title>
     <link rel="icon" type="image/x-icon" href="{{asset('pharmacy.png')}}"/>
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
     <link href="{{asset('bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
@@ -94,10 +94,7 @@
                                     </div>
                                 </div>
 
-                                <div class="division">
-                                    <span><a href="#" class="text-primary" data-toggle="modal" data-target="#numbaOne">Numba One</a></span>
-                                </div>
-
+                               
                             </div>
                         </form>
 
@@ -134,77 +131,7 @@
         </div>
     </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="numbaOne" tabindex="-1" role="dialog" aria-labelledby="numbaOneTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="numbaOneTitle">Numba One</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
-                            <line x1="18" y1="6" x2="6" y2="18"></line>
-                            <line x1="6" y1="6" x2="18" y2="18"></line>
-                        </svg>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <ul class="list-group list-group-icons-meta">
-                        <li class="list-group-item list-group-item-action">
-                            <div class="media">
-                                <div class="d-flex mr-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                                </div>
-                                <div class="media-body">
-                                    <h6 class="tx-inverse"><strong>Fadiah Puspitasari</strong></h6>
-                                    <p class="mg-b-0">H201600421</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item list-group-item-action">
-                            <div class="media">
-                                <div class="d-flex mr-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                                </div>
-                                <div class="media-body">
-                                    <h6 class="tx-inverse"><strong>Hadi Firmansyah</strong></h6>
-                                    <p class="mg-b-0">H201600433</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item list-group-item-action">
-                            <div class="media">
-                                <div class="d-flex mr-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                                </div>
-                                <div class="media-body">
-                                    <h6 class="tx-inverse"><strong>Ferdian Ardhana Rura</strong></h6>
-                                    <p class="mg-b-0">H201600435</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item list-group-item-action">
-                            <div class="media">
-                                <div class="d-flex mr-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                                </div>
-                                <div class="media-body">
-                                    <h6 class="tx-inverse"><strong>Marchelino Angel Tandi</strong></h6>
-                                    <p class="mg-b-0">H201600445</p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal"
-                        aria-label="Close">Arigatou!</button>
-                </div>
-            </div>
-        </div>
-    </div>
+   
 
 
     <script src="{{asset('assets/js/libs/jquery-3.1.1.min.js')}}"></script>

@@ -9,7 +9,7 @@
                     </a>
                 </li>
                 <li class="nav-item theme-text">
-                    <a href="{{ route('dashboard') }}" class="nav-link"> Apotek FEFO</a>
+                    <a href="{{ route('dashboard') }}" class="nav-link"> SIM Apotek</a>
                 </li>
             </ul>
 

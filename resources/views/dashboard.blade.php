@@ -189,5 +189,71 @@
         </div> --}}
 
 </div>
+<div class="row layout-top-spacing">
+    <div class="col-lg-12">
+        <div class="statbox widget box box-shadow">
+            <div class="widget-header">
+                <div class="row">
+                    <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                        <h4>Grafik</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-content widget-content-area">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+<script>
+    // Membuat objek data untuk grafik
+    const data = {
+        labels: ['Pembelian', 'Penjualan', 'HPP', 'Laba'],
+        datasets: [{
+            label: 'Bulan Ini',
+            data: [
+                {{ $total_pembelian_bulan_ini }},
+                {{ $total_penjualan_bulan_ini }},
+                {{ $hpp }},
+                {{ $laba }}
+            ],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)'
+            ],
+            borderWidth: 1
+        }]
+    };
+
+    // Membuat objek konfigurasi grafik
+    const config = {
+  type: 'bar',
+  data: data,
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  },
+};
+
+    // Membuat instance Chart baru dengan menggunakan objek konfigurasi
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, config);
+</script>
+
+
+
+
 
 @endsection

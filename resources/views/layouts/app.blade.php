@@ -12,6 +12,8 @@
 
     <title>{{ setTitle($page_name) }}</title>
     <link rel="icon" type="image/x-icon" href="{{asset('pharmacy.png')}}" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
 

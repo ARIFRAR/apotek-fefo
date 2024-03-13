@@ -1,4 +1,5 @@
     <!--  BEGIN SIDEBAR  -->
+    
     <div class="sidebar-wrapper sidebar-theme">
 
         <nav id="sidebar">
@@ -73,10 +74,27 @@
                         <a href="#transaksi" data-active="{{ ($category_name === 'transaksi') ? 'true' : 'false' }}"
                         data-toggle="collapse" aria-expanded="{{ ($category_name === 'transaksi') ? 'true' : 'false' }}"
                         class="dropdown-toggle">
+                        <style>
+                            @keyframes moveCart {
+                                0% { transform: translateY(0); }
+                                50% { transform: translateY(-5px); }
+                                100% { transform: translateY(0); }
+                            }
+                        
+                            .moving-cart {
+                                animation: moveCart 1s infinite;
+                            }
+                        </style>
+                        
                         <div class="">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart moving-cart">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
                             <span>Transaksi</span>
                         </div>
+                        
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -85,15 +103,19 @@
                             </svg>
                         </div>
                     </a>
-                        <ul class="collapse submenu list-unstyled {{ ($category_name === 'transaksi') ? 'show' : '' }}"
-                            id="transaksi" data-parent="#accordionExample">
-                            <li class="{{ ($page_name === 'pembelian') ? 'active' : '' }}">
-                                <a href="{{ route('pembelian.create') }}"> Pembelian </a>
-                            </li>
-                            <li class="{{ ($page_name === 'penjualan') ? 'active' : '' }}">
-                                <a href="{{ route('penjualan.create') }}"> Penjualan </a>
-                            </li>
-                        </ul>
+                    <ul class="collapse submenu list-unstyled {{ ($category_name === 'transaksi') ? 'show' : '' }}" id="transaksi" data-parent="#accordionExample">
+                        <li class="{{ ($page_name === 'pembelian') ? 'active' : '' }}">
+                            <a href="{{ route('pembelian.create') }}">
+                                <i class="fas fa-dollar-sign"></i> Pembelian
+                            </a>
+                        </li>
+                        <li class="{{ ($page_name === 'penjualan') ? 'active' : '' }}">
+                            <a href="{{ route('penjualan.create') }}">
+                                <i class="fas fa-dollar-sign"></i> Penjualan
+                            </a>
+                        </li>
+                    </ul>
+                    
                     </li>
 
                     @if (Auth::user()->level == 'Admin')
